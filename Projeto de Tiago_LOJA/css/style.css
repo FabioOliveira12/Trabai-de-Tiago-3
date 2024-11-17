@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ubuntu";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    background-color: #ffffff; 
+}
+header{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100px;
+    background-color: #ec710cec;
+}
+.box-titulo{
+    width: 20%;
+    display: block;
+    float: left;
+}
+.box-titulo a{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.box-titulo a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; 
+    width: 0;
+    height: 2px; 
+    background-color: #878787; 
+    transition: width 0.3s ease; 
+}
+.box-titulo a:hover::after{
+    width: 100%;
+}
+.box-titulo a:hover{
+    color: #858585
+}
+h1{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+h2{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+h3{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: red;
+}
+button{
+    background-color: #4CAF50;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: white;
+    transition: background-color 0.3, color 0.3s;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: none;
+    margin: 3px;
+    
+}
+button:hover{
+    background-color: #307432;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+nav {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    width: 80%;
+    height: 100px;
+    padding: 40px 20px;
+    text-align: center;
+    display: block;
+    float: right;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    align-items: center;
+}
+nav a:hover {
+    background-color: rgba(230, 238, 243, 0.6); /* Cor de fundo translúcida */
+    color: #f4f4f9;
+    border-radius: 30px;
+}
+img{
+    padding: 50px;
+    max-width: 600px;
+    align-items: center;
+}
+input{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    border-color: #307432;
+    padding: 5px 8px;
+    border-style: double;
+    border-width: 5px;
+    border-radius: 10px;
+    outline: none;
+}
+select {
+    font-family: "Ubuntu";
+    padding: 5px;
+    font-size: 15px;
+    border: 2px solid #4CAF50; 
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease;
+    outline: none;
+    cursor: pointer;
+    margin: 2px;
+}
+
+select:hover {
+    background-color: #e6ffe6; 
+    border: 2px solid #307432;
+    color: #307432; 
+}
+.mensagem {
+    opacity: 0;
+    background-color: #e0ffe0;
+    color: #006400;
+    padding: 10px;
+    border: 1px solid #006400;
+    border-radius: 5px;
+    font-size: 16px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 5s ease forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60px);
+    }
+    10% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    80% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -60px);
+    }
+}
+
+footer {
+    background-color: #777777; /* Cinza */
+    width: 100%; /* Ocupa toda a largura da tela */
+    position: fixed; /* Fixa na parte de baixo da página */
+    bottom: 0; /* Define a posição no final da página */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 10px 0; /* Espaçamento vertical para o texto */
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: bold;
+}
+
+.credits {
+    margin: 5px; /* Remove margens padrão */
+    font-size: 1rem; /* Ajuste o tamanho da fonte, se necessário */
+}
+
+/* Definindo a largura da tabela e o layout */
+.tabela {
+    width: 100%;
+    border-collapse: collapse; /* Remove o espaçamento entre as células */
+    margin: 20px 0; /* Espaçamento superior e inferior */
+    font-family: "Ubuntu", sans-serif; /* Fonte padrão */
+}
+
+/* Estilizando os cabeçalhos da tabela */
+th {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto em branco */
+    padding: 12px 15px; /* Padding interno */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilizando as células da tabela */
+td {
+    padding: 12px 15px; /* Padding interno */
+    text-align: left; /* Alinhamento à esquerda */
+    border-bottom: 1px solid #ddd; /* Bordas finas e suaves entre as linhas */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Estilo para a primeira coluna */
+td:first-child {
+    font-weight: bold; /* Deixar o texto da primeira coluna em negrito */
+}
+
+/* Linhas alternadas para melhorar a leitura */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor de fundo cinza claro nas linhas pares */
+}
+
+/* Adicionar cor de fundo quando o usuário passar o mouse sobre uma linha */
+tr:hover {
+    background-color: #d0d0d0; /* Cor de fundo cinza escuro */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+}
+
+/* Bordas externas da tabela */
+table, th, td {
+    border: 1px solid #ddd; /* Borda suave de cor cinza */
+}
+
+/* Responsividade da tabela para telas menores */
+@media screen and (max-width: 600px) {
+    table {
+        font-size: 12px; /* Reduzir o tamanho da fonte em telas menores */
+    }
+
+    th, td {
+        padding: 8px; /* Reduzir o padding em telas menores */
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 20px 5px;
+    }
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    .icone {
+        display: block;
+        margin: 40px auto;  
+        width: 50%; 
+        max-width: 400px; 
+    }
+}
